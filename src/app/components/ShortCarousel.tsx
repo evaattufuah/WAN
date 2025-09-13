@@ -10,10 +10,9 @@ import Image from "next/image";
 import happy from "@/app/assets/images/happycouple.avif";
 import alex from "@/app/assets/images/alexander-rotker-l8p1aWZqHvE-unsplash.jpg";
 import shoe from "@/app/assets/images/shoe-img.jpg";
-import eva from "@/app/assets/images/eva.jpg";
+import eva from "@/app/assets/images/evaa.jpg";
 import beauty from "@/app/assets/images/onne-beauty-u8bTCVoJCP8-unsplash.jpg";
 import pix from "@/app/assets/images/pix 3.avif";
-import fam from "@/app/assets/images/famousengland.jpg";
 import black from "@/app/assets/images/black-panther-nawpic-50.jpg";
 import man from "@/app/assets/images/businessman.jpg";
 
@@ -144,7 +143,7 @@ export default function Carousel() {
           </svg>
         </button>
 
-        <button className="swiper-button-next-custom w-10 h-10 bg-white backdrop-blur-sm rounded-full flex items-center justify-center text-black hover:bg-white transition-all duration-200 border border-white">
+        <button className="swiper-button-next-custom w-10 h-10 bg-white backdrop-blur-sm rounded-full flex items-center justify-center text-black hover:bg-white transition-all duration-200 border border-white cursor-pointer">
           <svg
             width="20"
             height="20"
@@ -165,11 +164,15 @@ export default function Carousel() {
 
       {/* Overlay Text */}
       <div className="absolute bottom-20 right-20 text-white z-10 max-w-md">
-        <p className="text-4xl font-semibold text-end ml-12">Open Source</p>
-        <p className="mt-3 text-2xl font-semibold ">FLUX.1 Krea</p>
+        <p className="text-4xl font-semibold text-end ml-12 cursor-pointer">
+          Open Source
+        </p>
+        <p className="mt-3 text-2xl font-semibold cursor-pointer">
+          FLUX.1 Krea
+        </p>
 
         <div className="flex flex-col md:flex-row md:items-center md:gap-8 mt-4">
-          <p className="text-sm">
+          <p className="text-sm cursor-pointer">
             ultra-realistic textures. "We're making the weights to our FLUX.1
             <br />
             Krea model open-source. Download and run our model weights, <br />

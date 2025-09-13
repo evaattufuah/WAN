@@ -9,14 +9,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import dandan from "@/app/assets/images/dandan.jpg";
-import tourist from "@/app/assets/images/tourist.jpg";
-import lady from "@/app/assets/images/sunglasses.jpg";
+import tourist from "@/app/assets/images/tourist3.jpg";
+import lady from "@/app/assets/images/sunglassess.jpg";
 import demon from "@/app/assets/images/Demon1.jpg";
 import hero from "@/app/assets/images/heroAcademla.avif";
-import outside from "@/app/assets/images/outdoor-lifestyle-portrait-smiling-black-woman-pink-glasses.jpg";
 import gland from "@/app/assets/images/famousengland.jpg";
 import gojo from "@/app/assets/images/gojo.jpg";
-import friends from "@/app/assets/images/friends-jumping-while-out-city.jpg";
+import friends from "@/app/assets/images/friends-jumping.jpg";
 
 export default function Carousel() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -30,7 +29,6 @@ export default function Carousel() {
     demon,
     tourist,
     hero,
-    outside,
     lady,
   ];
 
@@ -49,7 +47,7 @@ export default function Carousel() {
       <Swiper
         slidesPerView={3}
         navigation
-        pagination={false} 
+        pagination={false}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
@@ -146,17 +144,6 @@ export default function Carousel() {
             />
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <Image
-              src={outside}
-              alt="Slide 8"
-              width={800}
-              height={400}
-              className="w-full h-[400px] object-cover rounded-xl"
-            />
-          </div>
-        </SwiperSlide>
 
         <SwiperSlide>
           <div>
@@ -171,7 +158,7 @@ export default function Carousel() {
         </SwiperSlide>
       </Swiper>
 
-      <div className="flex justify-center gap-2 mt-6">
+      <div className="flex justify-center cursor-pointer gap-2 mt-6">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -185,18 +172,18 @@ export default function Carousel() {
         ))}
       </div>
 
-      <div className="absolute bottom-16 left-6 text-white z-10 text-sm ">
+      <div className="absolute bottom-16 left-6 text-white z-10 text-sm cursor-pointer">
         <p className="mt-7 text-white z-10 text-4xl font-extrabold text-center ">
           WAN 2.2
         </p>
         <br />
-        <p className="mt-7 text-white z-10 text-2xl font-semibold ">
+        <p className="mt-7 text-white z-10 text-2xl font-semibold cursor-pointer">
           WAN 2.2 Image generations
         </p>
         <br />
         <div className="flex gap-16">
           <div>
-            <p className="text-white z-10 text-sm ">
+            <p className="text-white z-10 text-sm cursor-pointer ">
               Generate complex images with the brand new and powerful <br />
               WAN 2.2 model. Exceptional prompt adherence and <br />
               ultra-realistic textures.
@@ -204,7 +191,7 @@ export default function Carousel() {
           </div>
 
           <div>
-            <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition">
+            <button className="bg-white cursor-pointer  text-gray-900 px-6 py-3 rounded-full font-medium hover:bg-amber-400 transition">
               Try WAN 2.2
             </button>
           </div>
