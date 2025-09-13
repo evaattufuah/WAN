@@ -1,103 +1,115 @@
+
+import icon from "@/app/assets/images/kicon.png";
 import Image from "next/image";
+import icon2 from "@/app/assets/images/mobbin.png";
+import HeroBanner from "@/app/components/HeroBanner";
+import FeatureCard from "@/app/components/FeatureCard";
+import { 
+  Image as ImageIcon,
+  Video as VideoIcon,
+  Zap as RealtimeIcon,
+  Sparkles as EnhancerIcon,
+  Edit as EditIcon,
+  Mic as VideoLipsyncIcon,
+  Move as MotionTransferIcon,
+  Cpu as TrainIcon
+} from "lucide-react";
+import Sidebar from "./components/Sidebar";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="container mx-auto px-4 py-4 shadow-lg  rounded-lg ">
+      <Sidebar />
+      <HeroBanner />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Generate Section */}
+      <section className="mt-16">
+        <h2 className="text-2xl font-bold mb-6">Generate</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <FeatureCard
+            icon={
+              <ImageIcon className="w-8 h-8" style={{ color: "#FF6B6B" }} />
+            }
+            title="Image"
+            desc="Generate images with custom styles in Flux and Ideogram."
+            newTag={true}
+          />
+
+          <FeatureCard
+            icon={<VideoIcon className="w-8 h-8 text-blue-600" />}
+            title="Video"
+            desc="Generate videos with Halus, Pika, Runway, Luma, and more."
+            newTag={false}
+          />
+
+          <FeatureCard
+            icon={<RealtimeIcon className="w-8 h-8 text-yellow-600" />}
+            title="Realtime"
+            desc="Realtime AI rendering on a canvas. Instant feedback loops."
+            newTag={true}
+          />
+
+          <FeatureCard
+            icon={<EnhancerIcon className="w-8 h-8 text-purple-600" />}
+            title="Enhancer"
+            desc="Upscale and enhance images and videos up to 22K."
+            newTag={true}
+          />
+
+          <FeatureCard
+            icon={<EditIcon className="w-8 h-8 text-green-600" />}
+            title="Edit"
+            desc="Add objects, change style, or expand photos and generations."
+            newTag={true}
+          />
+
+          <FeatureCard
+            icon={<VideoLipsyncIcon className="w-8 h-8 text-pink-600" />}
+            title="Video Lip-sync"
+            desc="Lip sync any video to any audio."
+            newTag={true}
+          />
+
+          <FeatureCard
+            icon={<MotionTransferIcon className="w-8 h-8 text-indigo-600" />}
+            title="Motion Transfer"
+            desc="Transfer motion to images and animate characters."
+            newTag={true}
+          />
+
+          <FeatureCard
+            icon={<TrainIcon className="w-8 h-8 text-orange-600" />}
+            title="Train"
+            desc="Teach Krea to replicate your style, products, or characters."
+            newTag={false}
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <div className="flex justify-between mt-4">
+          <p className="font-semibold">General</p>
+          <p className="font-semibold">logout</p>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+
+      {/* Footer */}
+      <footer className="mt-4 pb-2 border-t border-gray-200 pt-3 bg-black text-center text-sm text-gray-600">
+        <div className="flex justify-between items-center w-full ">
+          <div className="flex items-center">
+            <Image src={icon} alt="icons" width={18} height={4} />
+            <span className="ml-2 font-semibold">Krea AI</span>
+          </div>
+
+          <div className="flex items-center space-x-2 text-white">
+            <span>curated by</span>
+            <div className="flex items-center text-gray-900">
+              <Image src={icon2} alt="" width={18} height={4} />
+              <span className="ml-2 font-semibold">Mobbin</span>
+            </div>
+          </div>
+        </div>
       </footer>
-    </div>
+    </main>
   );
 }
+
