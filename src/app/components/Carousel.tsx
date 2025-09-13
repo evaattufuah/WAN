@@ -22,11 +22,10 @@ import friends from "@/app/assets/images/friends-jumping.jpg";
 
 export default function Carousel() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null); // 👈 Type correctly
+  const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null); 
 
   const slides = [dandan, gland, gojo, friends, demon, tourist, hero, lady];
 
-  // ✅ FIXED: Now TypeScript knows exactly what 'swiper' is
   const handleSlideChange = (swiper: SwiperType) => {
     setActiveIndex(swiper.realIndex);
   };
@@ -63,14 +62,13 @@ export default function Carousel() {
                 width={800}
                 height={400}
                 className="w-full h-[400px] object-cover rounded-xl"
-                priority={index === 0} // Only prioritize first image for performance
+                priority={index === 0} 
               />
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
-      {/* Dots Indicator */}
       <div className="flex justify-center cursor-pointer gap-2 mt-6">
         {slides.map((_, index) => (
           <button
