@@ -7,7 +7,7 @@ import "swiper/css/effect-cards";
 import "swiper/css/navigation";
 
 import Image from "next/image";
-import happy from "@/app/assets/images/happycouple.avif";
+import happy from "@/app/assets/images/happycouple.jpg";
 import alex from "@/app/assets/images/alexander-rotker-l8p1aWZqHvE-unsplash.jpg";
 import shoe from "@/app/assets/images/shoe-img.jpg";
 import eva from "@/app/assets/images/evaa.jpg";
