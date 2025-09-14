@@ -104,7 +104,7 @@ export default function Carousel() {
           </div>
 
           <div>
-            <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-medium hover:bg-amber-400 transition-all duration-300 shadow-lg">
+            <button className="bg-white text-gray-900 px-6 py-3 ml-8 rounded-full font-medium hover:bg-amber-400 transition-all duration-300 shadow-lg">
               Try WAN 2.2
             </button>
           </div>

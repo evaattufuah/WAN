@@ -125,7 +125,7 @@ export default function Carousel() {
 
       {/* Custom Navigation Buttons - Positioned below the carousel */}
       <div className="flex justify-center ml-24 gap-4 mt-3">
-        <button className="swiper-button-prev-custom w-10 h-10 bg-white backdrop-blur-sm rounded-full flex items-center justify-center text-end hover:bg-white transition-all duration-200 border border-white">
+        <button className="swiper-button-prev-custom w-10 h-10 bg-white backdrop-blur-sm rounded-full flex items-center justify-center text-black hover:bg-white transition-all duration-200 border border-white">
           <svg
             width="20"
             height="20"

@@ -13,11 +13,13 @@ const Sidebar = () => {
   ];
 
   return (
-    <header className="h-16 flex items-center justify-between px-6">
+    <header className="h-16 flex items-center justify-between px-6 bg-transparent">
+      {/* Logo & Title */}
       <div className="flex items-center space-x-3">
-        <Image src={icon} alt="icons" width={18} height={4} />
-
-        <span className="text-xl font-semibold text-gray-800">Dashboard</span>
+        <Image src={icon} alt="Krea AI logo" width={18} height={4} />
+        <span className="text-xl font-semibold dark:text-white text-gray-900">
+          Krea AI
+        </span>
       </div>
 
       {/* Navigation Links */}
@@ -26,7 +28,10 @@ const Sidebar = () => {
           <Link
             key={item.name}
             href={item.href}
-            className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
+            className="flex items-center space-x-1 
+                       dark:text-white text-gray-900 
+                       hover:dark:text-blue-300 hover:text-blue-600 
+                       transition-colors duration-200"
           >
             <span className="text-lg">{item.icon}</span>
             <span className="font-medium text-sm">{item.name}</span>
@@ -34,8 +39,14 @@ const Sidebar = () => {
         ))}
       </nav>
 
+      {/* Notification Button */}
       <div className="flex items-center space-x-4">
-        <button className="p-2 text-gray-600 hover:text-red-500 transition-colors">
+        <button
+          className="p-2 
+                           dark:text-white text-gray-900 
+                           hover:dark:text-red-400 hover:text-red-600 
+                           transition-colors duration-200"
+        >
           🔔
         </button>
       </div>
